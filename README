@@ -1,0 +1,29 @@
+Harrison Kerr
+
+Description:
+  Accepts arguments for a disk image file and an output directory. The program
+  parses the provided disk image and finds all valid files including
+  deleted files that have not been overwritten. It prints information about the
+  found files and writes those files to the given directory.
+
+KNOWN PROBLEMS
+  SegFault when the path to a file found on the disk image is more than
+  STRINGBUFFER (50) characters long.
+  Program does not check size and does not check FAT for directories.
+  Instead, the program stops reading a directory only when the first byte of
+  an entry (subdirectory/file) is 0.
+
+DESIGN
+  Splitting the different parts of the program into individual functions made it
+  a lot easier to understand and modularize my work. I found recursive functions
+  to be especially useful in searching directories for files.
+
+Resources:
+  Operating Systems class lectures / hex editor quiz
+  Operating Systems class git repository
+  man pages
+  Piazza
+  Jacob Sorber @ YouTube
+  Stack Overflow
+  HxD hex editor
+  https://techoverflow.net/2013/04/05/how-to-use-mkdir-from-sysstat-h/

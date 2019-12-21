@@ -1,0 +1,8 @@
+cp blankfloppy.img tmp.img
+mcopy -i tmp.img test_content/test.txt ::A.TXT
+mcopy -i tmp.img test_content/deleted.txt ::B.TXT
+mcopy -i tmp.img test_content/kitty.jpg ::CAT.JPG
+mmd -i tmp.img ::IMGS
+mcopy -i tmp.img test_content/kitty.jpg ::IMGS/KITTY.JPG
+mdel -i tmp.img ::B.TXT
+mv tmp.img images/simple.img
